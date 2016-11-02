@@ -8,7 +8,7 @@ final class Post: Model {
     var contact: String?
     var company: String?
     
-    var position: String?
+    
     var githubID: String?
     var comingForDinner: Bool = false
     var exists = false
@@ -24,7 +24,7 @@ extension Post {
         name = node["name"]?.string
         contact = node["contact"]?.string
         company = node["company"]?.string
-        position = node["position"]?.string
+        
         comingForDinner = node["comingForDinner"]?.bool ?? false
     }
 
@@ -38,7 +38,7 @@ extension Post {
                 "name": name,
                 "contact": contact,
                 "comingForDinner": comingForDinner,
-                "position": position,
+                
                 "company": company
             ]
         )
@@ -54,7 +54,7 @@ extension Post: Preparation {
             posts.string("name")
             posts.string("contact")
             posts.bool("comingForDinner")
-            posts.string("position")
+            
             posts.string("company")
             posts.int("order", optional: true)
         }
@@ -74,7 +74,7 @@ extension Post {
         name = updates.name ?? name
         contact = updates.contact ?? contact
         comingForDinner = updates.comingForDinner
-        position = updates.position ?? position
+        
         company = updates.company ?? company
     }
 }
