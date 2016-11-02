@@ -118,7 +118,7 @@ var PostForm = function (_Component) {
             e.preventDefault();
             console.log("aaaa");
 
-            _superagent2.default.post("http://localhost:8080/posts")
+            _superagent2.default.post("posts")
             // .post('https://rescueking.herokuapp.com/posts')
             .send({
                 name: this.state.name,

@@ -71,7 +71,7 @@ export default class PostForm extends Component  {
       console.log("aaaa");
 
       request
-          .post("http://localhost:8080/posts")
+          .post("posts")
           // .post('https://rescueking.herokuapp.com/posts')
           .send({
               name: this.state.name,
